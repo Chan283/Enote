@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="jumbotron container mycontainer">
+	<h1 class="title">My Notes</h1>
+	<a class="btn btn-outline-primary" href="{%url 'notes_create'%}" style="margin-bottom:15px;">Add new Note</a>
+	<br>
+	{%for note in notes_list %}
+		<a id="list_title" href="{%url 'notes_detail' pk=note.pk%}">{{note.title}}</a><br>	
+		{% empty %}
+			<p>No Notes added yet</p>
+	{% endfor %}
+	
+</div>
+{% endblock %}

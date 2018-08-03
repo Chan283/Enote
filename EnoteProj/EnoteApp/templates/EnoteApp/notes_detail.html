@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+
+{% load social_share %}
+
+{% load staticfiles %}
+
+{% block content %}
+<div class="jumbotron container mycontainer">
+	<h2 class="title" style="display:inline">{{notes.title}}</h2>
+	<a href="{%url 'notes_update' pk=notes.pk%}" style="display:inline;margin-left:1em;"><i class="material-icons shrbtn">edit</i></a>
+	<a href="{%url 'notes_delete' pk=notes.pk%}" style="display:inline"><i class="material-icons shrbtn">delete_outline</i></a>
+	<h3 id="det_sub">Subject</h3> <p class="det_text">{{notes.subject}}</p>
+	<h3 id="det_note">Notes </h3> <p class="det_text">{{notes.text}}</p>
+	
+	<p id="sharesection">
+	<h5>Share To: </h5>
+	
+	<a href="https://www.facebook.com/sharer/sharer.php?u={{request.build_absolute_uri}}"><img class="shrbtn" src="{%static 'icons/fb.jpg'%}"></img></a>
+	
+	<a href="https://plus.google.com/share?url={{request.build_absolute_uri}}"><img class="shrbtn" src="{%static 'icons/gplus.jpg'%}"></img></a>
+	
+	<a href="https://www.linkedin.com/sharing/share-offsite/?url={{request.build_absolute_uri}}"><img class="shrbtn" src="{%static 'icons/li.jpg'%}"></img></a>
+	
+	<a href="https://www.twitter.com/intent/tweet?text={{request.build_absolute_uri}}"><img class="shrbtn" src="{%static 'icons/tw.jpg'%}"></img></a>
+	
+	<!-- {% post_to_gplus object_or_url "Google+"%} -->
+	<!-- {% post_to_facebook object_or_url "Facebook"%} -->
+	<!-- {% post_to_twitter text_to_post object_or_url "Twitter"%} -->
+	<!-- {% post_to_linkedin text_to_post object_or_url "LinkedIn" %} -->
+
+</div>
+{% endblock %}

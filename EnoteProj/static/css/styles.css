@@ -1,0 +1,78 @@
+/* General */
+*{
+	font-family:times;
+	text-shadow:3px 3px rgba(0, 0, 0, 0.1);
+}
+
+a{
+	text-decoration:none !important;
+}
+
+i{
+	color:black;
+}
+
+/* Homepage */
+
+#main_head{
+	font-size:6em;
+	text-shadow:5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#main_tag_line{
+	text-shadow:3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#main_page_content{
+	text-align:center;
+	margin-top:11rem;
+	text-shadow:5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mycontainer{
+	background-color:rgba(0, 0, 0, 0.1);
+	margin-top:6em;
+}
+
+
+/* Notes List */
+
+#list_title{
+	color:black;
+}
+
+#list_title:hover{
+	font-size:1.5rem;
+}
+
+
+/* Notes Details */
+
+.title{
+	font-size:4rem;
+	margin-bottom:1rem;
+}
+
+#det_sub,#det_note{
+	font-size:1.6rem;
+	font-weight:bold;
+}
+
+.det_text{
+	font-size:1.2rem;
+}
+
+#sharesection{
+	margin-top:5rem;
+}
+
+.shrbtn{
+	margin-right:0.2rem;
+	width:1.5rem;
+	height:1.5rem;
+}
+
+.shrbtn:hover{
+	width:2rem;
+	height:2rem;
+}

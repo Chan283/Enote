@@ -1,0 +1,12 @@
+{% extends 'EnoteApp/base.html'%}
+
+{% block content %}
+	<div class="container jumbotron mycontainer">
+		<h1 class="title">Login</h1>
+		<form method="post">
+			{% csrf_token %}
+			{{form.as_p}}
+			<button type="submit" class="btn btn-outline-primary">Login</button>
+		</form>
+	</div>
+{% endblock %}

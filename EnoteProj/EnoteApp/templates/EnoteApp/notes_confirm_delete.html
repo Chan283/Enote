@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="POST">
+	<div class="jumbotron container mycontainer">
+	{% csrf_token %}
+	<h2>Are you sure you want to permanently delete the note '{{notes.title}}'?</h2>
+	<button type="submit" class="save btn btn-outline-danger">Delete</button>
+	<a href="{%url 'notes_detail' pk=notes.pk %}" class="btn btn-outline-primary">Back</a>
+	</div>
+</form>
+
+{% endblock %}

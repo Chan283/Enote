@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form class="notes-form" method="POST">
+	<div class="jumbotron container mycontainer">
+	<h2>Please fill below Details</h2>
+		{% csrf_token %}
+		
+		<h6 labelfor="title">Title</h6>
+		<h6 id="title">{{form.title}}</h6>
+		
+		<h6 labelfor="subject">Subject</h6>
+		<h6 id="subject">{{form.subject}}</h6>
+		
+		<h6 labelfor="text">Notes</h6>
+		<h6 id="text">{{form.text}}</h6>
+		
+		<button type="submit" class="save btn btn-outline-primary">Save</button>
+	</div>
+</form>
+
+{% endblock %}
